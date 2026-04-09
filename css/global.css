@@ -1,0 +1,26 @@
+
+/*CSS RESET, limpiamos los estilos por defecto del navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Truco, impide que el tamanho de una caja cambie aunque se anhada bordes y rellenos*/
+}
+
+
+/* VARIABLES DE COLOR */
+:root {
+    --bg: #0d0f14;          /*background, color del fondo de la pagina*/
+    --surface: #161a23;     /*Superficie, capa encima del fondo*/
+    --primary: #00008B;     /*Color principal de la pag*/
+    --text: #f0eee8;        /*color del texto de la pagina*/
+    --muted: #7a8099;       /*color para info que no es importante*/
+    --border: #2a2f3e;      /*color para las lineas divisorias*/
+}
+
+/*Definimos el tipo de fuente, fondo y color de texto de toda la pagina*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
