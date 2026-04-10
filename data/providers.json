@@ -1,0 +1,43 @@
+[
+    {
+        "id" : 1,
+        "name" :"Rodolfo Escobar",
+        "service" : "Albanhil",
+        "rating" : 4
+    },
+
+    {
+        "id" : 2,
+        "name" :"Eulogio Gomez",
+        "service" : "Pintor",
+        "rating" : 5
+    },
+
+    {
+        "id" : 3,
+        "name" :"Mauricio Torres",
+        "service" : "Electricista",
+        "rating" : 4
+    },
+
+        {
+        "id" : 4,
+        "name" :"Ignacio Colman",
+        "service" : "Jardinero",
+        "rating" : 3
+    },
+
+        {
+        "id" : 5,
+        "name" :"Gloria Ayala",
+        "service" : "Organizadora de Eventos",
+        "rating" : 4
+    },
+
+        {
+        "id" : 6,
+        "name" :"Alcides Gonzales",
+        "service" : "Asadero",
+        "rating" : 5
+    }
+]
