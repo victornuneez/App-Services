@@ -10,6 +10,7 @@
     <!--EL ORDEN IMPORTA, LO ESPECIFICO PUEDE SOBREESCRIBIR LO GLOBAL-->
     <!-- CSS GLOBAL-->
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/providers.css">
     
     <!--CSS ESPECIFICO DE INICIO-->
     <link rel="stylesheet" href="css/home.css">
@@ -21,8 +22,40 @@
     </header>
 
     <!--CONTENIDO PRINCIPAL - SOLO UN MAIN POR PAGINA(CONTENIDO PRINCIPAL)-->
-    <main>
-        <!--ACA VA EL CONTENIDO DE CADA PAGINA-->
+    <main class="container">
+        <!--Section del HERO-->
+        <section class="hero">
+            <h2>Encontra los mejores proveedores de servicios de la ciudad</h2>
+            <p>Conectamos personas con proveedores verificados de forma rapida y segura</p>
+
+            <a href="providers.html" class="btn-primary">Ver proveedores</a>
+        </section>
+
+        <!--Section de cards de Proveedores destacados-->
+        <section class="providers">
+            <h3>Proveedores destacados</h3>
+
+            <div class="cards">
+                <div class="card">
+                    <h4>Juan Perez</h4>
+                    <p>Plomeria</p>
+                    <p>⭐⭐⭐⭐</p>
+                    <a href="#" class="btn-primary">Ver mas</a>
+                </div>
+                <div class="card">
+                    <h4>Martin Cirio</h4>
+                    <p>Electricista</p>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn-primary">Ver mas</a>
+                </div>
+                <div class="card">
+                    <h4>Marta Gomez</h4>
+                    <p>Lavanderia</p>
+                    <p>⭐⭐⭐⭐</p>
+                    <a href="#" class="btn-primary">Ver mas</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!--FOOTER REUTILZABLE - ES UN CONTENEDOR VACIO PARA LLENAR CON JS-->
