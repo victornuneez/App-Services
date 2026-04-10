@@ -11,7 +11,7 @@
 :root {
     --bg: #0d0f14;          /*background, color del fondo de la pagina*/
     --surface: #161a23;     /*Superficie, capa encima del fondo*/
-    --primary: #00008B;     /*Color principal de la pag*/
+    --primary: #7B68EE;     /*Color principal de la pag*/
     --text: #f0eee8;        /*color del texto de la pagina*/
     --muted: #7a8099;       /*color para info que no es importante*/
     --border: #2a2f3e;      /*color para las lineas divisorias*/
@@ -24,3 +24,82 @@ body {
     color: var(--text);
 }
 
+/*La clase container define un carril central para el contenido no se desparrame por la pantalla*/
+
+.container {
+    max-width: 1100px; /*define el maximo de ancho de 1100px pero puede achicarse como quiera*/
+    margin: 0 auto;    /*primer num(0) indica que arriba y abajo no habra margen extra*/
+                    /*auto le indica al navegador que iguale los espacios de derecha e izquierda*/
+    padding: 20px; /*impide que el contenido de container toque los bordes.*/
+} 
+
+
+
+.navbar {
+    display: flex; /*Convierte la barra en una barra flexible*//* Coloca el logo y los enlaces uno al lado del otro*/
+    justify-content: space-between; /*Envia el logo a la izquierda y el menu a la derecha */
+    align-items: center;            /*Centra el logo y el menu verticalmente*/
+
+    padding: 20px 40px;             /*Crea un espacio para que el contenido no toque los bordes*/
+    background-color: var(--surface); /*Color del fondo de la barra de navegacion*/
+    border-bottom: 1px solid var(--border); /*borde del boton, tamnho de linea, tipo y color*/
+}
+
+
+.navbar ul {
+    display: flex;  /*Pone los elementos uno al lado del otro*/
+    gap: 30px;      /*Les da un salto de espacio uno del otro*/
+    list-style: none;   /*Quita los estilos de la lista, los puntitos*/
+}
+
+.navbar a {
+    text-decoration: none;          /*quita el subrayado de las opciones de menu*/
+    color: var(--text);             /*color de textos del menu*/
+    font-size: 20px;                /*tamanho de los textos*/
+    transition: color 0.2s ease;    /*tiempo en que tarda la transicion de cambiar de color de un boton*/
+}
+
+/*hover es una pseudoclase que detecta cuando el cursor pasa por un elemento*/
+/*Da feedback visual al usuario*/
+.navbar a:hover {
+    color: var(--muted)             /*color al que cambie los elementos al posarse el cursor*/
+}
+
+/*La clase boton, estilo base reutilizable*/
+.btn-primary {
+    display: inline-block;         /*inline: pone en linea al boton, no ocupa toda la pantalla. block: permite padding,margin */
+    padding: 10px 20px;             /*espacio entre el texto y el borde del boton*/
+    background-color: var(--primary);   /*color de fondo del boton*/
+    color: var(--text);                    /*color del texto*/
+    text-decoration: none;             /*quita subrayado automatico de los enlaces <a>*/
+    border-radius: 8px;                 /*redondera las esquinas del boton*/
+    font-weight: bold;                /*pone el texto en negrita*/
+}
+
+.hero {
+    text-align: center;     /*centra el texto y elementos de la seccion*/
+    margin-top: 60px;       /*crea un espacio por fuera del borde superio de un elemento*/
+    padding: 60px 20px;     /*crea espacio dentro de la seccion entre el contenido y sus propios bordes*/
+    background-color: var(--surface); /*le ponemos color al fondo de manera que pueda visualizar el tamnho de la seccion*/
+    border-radius: 10px; /*redondeamos los bordes de la seccion*/   
+}
+
+.hero h2 {
+    font-size: 40px;        /*tamanho de la fuente del texto del tag h2*/
+    margin-bottom: 20px;    /*crea un espacio por fuera del borde inferior de un elemento*/
+}
+
+.hero p {
+    color: var(--muted);    /*color del texto*/
+    margin-bottom: 30px;    /*espacio inferior*/
+    font-size: 18px;        /*tamanho de la fuente de letra*/
+}
+
+.footer {
+    margin-top: 60px;       /*separamos el footer del contenido de arriba*/
+    padding: 30px 20px;     /*le damos espacio interno*/
+    background-color: var(--surface);   /*color de fondo del footer*/
+    border-top: 1px solid var(--border);    /*linea superior del contenedor, tipo, grosor y color*/
+    text-align: center;         /*alineamos en el centro el texto*/
+    color: var(--muted);    /*color del texto*/
+}
