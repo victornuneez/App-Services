@@ -1,0 +1,17 @@
+.providers {
+    margin-top: 60px; /*crear espacio superior*/
+}
+
+.cards {
+    display: flex;  /*pone los cards uno al lado del otro y activa el flexbox*/
+    gap: 20px;      /*crea un espacion de 20px entre los elementos*/
+    margin-top: 31px; /*crea un espacio superior de 31px*/
+
+}
+
+.card {
+    background-color: var(--surface); /*color de fondo de cada card*/
+    padding: 25px;          /*espacio interior de cada card*/
+    border-radius: 10px;    /*redondea el borde de cada card*/
+    flex: 1;            /*hace que las cada card tengan el mismo ancho y se repartan el espacio del contenedor en partes iguales*/
+}
