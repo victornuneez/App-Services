@@ -15,3 +15,14 @@
     border-radius: 10px;    /*redondea el borde de cada card*/
     flex: 1;            /*hace que las cada card tengan el mismo ancho y se repartan el espacio del contenedor en partes iguales*/
 }
+
+/*section*/
+.providers-page {
+    margin-top: 60px;   /*crea espacio superior de la barra de nav*/
+}
+
+/*subtitulo de la section*/
+.providers-page h2 {
+    font-size: 32px;        /*tamanho de la fuente*/
+    margin-bottom: 20px;    /*crea un espacio inferior del contenido del h2*/
+}
