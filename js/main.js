@@ -15,3 +15,16 @@ const loadNavbar = async () => {
 
 // Ejecutamos la funcion
 loadNavbar();
+
+
+const loadFooter = async () => {
+    const footer = document.getElementById("footer");
+    
+    const res = await fetch("components/footer.html");
+
+    const html = await res.text();
+
+    footer.innerHTML = html;
+}
+
+loadFooter();
