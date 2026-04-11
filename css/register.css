@@ -1,0 +1,31 @@
+.register {
+    margin-top: 60px;   /*margen superior*/
+    background-color: var(--surface); /*color del fondo del formulario*/
+    padding: 60px;  /*relleno superio e inferior*/
+    border-radius: 12px; /*borde redondeado del contenedor*/
+    max-width: 600px;   /*maximo de ancho permitido*/
+    margin-left: auto; /*Margen izquierdo automatico*/
+    margin-right: auto; /*MArgen derecho automatico*/
+}
+
+.register h2 {
+    font-size: 32px;    /*tamnho de la fuente*/
+    margin-bottom: 25px;    /*margen inferior*/
+    text-align: center; /*alinea el texto al centro del contenedor*/
+}
+
+#register-form {
+    display: flex;  /*activamos el modo flexbox para poder manipular los elementos*/
+    flex-direction: column; /*posicionamos los campos del formulario uno abajo del otro*/
+    gap: 15px;  /*les damos un espacio entre los campos del formulario*/
+}
+
+#register-form input,
+#register-form textarea {
+    padding: 12px;  /*relleno de los campos arriba y abajo*/
+    border-radius: 8px; /*borde de los campos*/
+    border: 1px solid var(--border);    /*color de la linea del borde, grosor y tipo*/
+    background-color: var(--bg);    /*color del fondo de los campos*/
+    color: var(--text);  /*Color del texto de los campos*/
+    font-size: 16px; /*tamanho de la fuente*/
+}   
