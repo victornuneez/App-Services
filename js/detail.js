@@ -7,6 +7,9 @@ const loadProviderDetail = async () => {
     // Traemos los datos de los proveedores y lo convertimos en un objeto JSON
     const res = await fetch("data/providers.json");
     const providers = await res.json()
+    
+    // Seleccionamos el contenedor en donde iran los datos del proveedor
+    const container =document.getElementById("provider-detail");
 
     // Buscamos el proveedor con el id que tenemos dentro del objeto JSON de proveedores
     const provider = providers.find(p => p.id === Number(id));
@@ -21,17 +24,24 @@ const loadProviderDetail = async () => {
         `;
         return;
     }
-
-    // Seleccionamos el contenedor en donde iran los datos del proveedor
-    const container =document.getElementById("provider-detail");
-
+    //CARD DEL PROVEEDOR
     const card = `
-        <div class="card">
-            <h2>${provider.name}</h2>
-            <br>
-            <p>${provider.service}</p>
-            <br>
-            <p>${"⭐".repeat(provider.rating)}</p>
+        <div class="provider-detail-card">
+
+            <h2 class="provider-name">${provider.name}</h2>
+            <p class="provider-service">${provider.service}</p>
+            <p class="provider-rating">
+            ${"⭐".repeat(provider.rating)}
+            (${provider.reviews || 0} reseñas)
+            </p>
+            <p class="provider-location">📍 ${provider.location || "Sin Ubicacion"}</p>
+            <p class="provider-description">
+                ${provider.description || "Sin descripcion disponible"}
+            </p>
+
+            <a href="https://wa.me/${provider.phone}" target="_blank" class="btn-primary">
+                📞 WhatsApp
+            </a>
         </div>
     `;
 
