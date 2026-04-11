@@ -1,6 +1,28 @@
+
+// Funcion que se encarga de realizar las busquedas por categorias y letras.
+const searchProviders = (providers, container) => {
+    // obtenemos el input que el usuario ingreso para realizar la busqueda
+    const input = document.getElementById("search-input");
+
+    // activamos el evento input, con solo agregar una letra en el buscador se ejecutara
+    input.addEventListener("input", () => {
+        // guardamos el texto que escribio el usuario en minusculas
+        const text = input.value.toLowerCase();
+
+        // Guardamos los proveedores o proveedor que coincidan con el caracter o caracteres de la busqueda.
+        const filtered = providers.filter(p => 
+            p.name.toLowerCase().includes(text) ||
+            p.service.toLowerCase().includes(text) 
+        );
+        
+        // Renderizamos la lista con los proveedores que coinciden con la busqueda.
+        renderProviders(filtered, container);
+    });
+};
+
+
 const loadProviders = async () => {
     try {
-
         // Traemos el archivo JSON
         const res = await fetch("data/providers.json");
         
@@ -14,28 +36,17 @@ const loadProviders = async () => {
             container.innerHTML = "<p>No hay proveedores disponibles</p>";
             return;
         }
-        
-        // recorremos cada proveedor
-        providers.forEach(provider => {
-            // Creamos la card en HTML, repeat metodo de JS que repite un texto
-            const card = `
-            <div class="card">
-            <h4>${provider.name}</h4>
-            <br>
-            <p>${provider.service}</p>
-            <br>
-            <p>${"⭐".repeat(provider.rating)}</p>
-            <br>
-            <a href="detail-provider.html?id=${provider.id}" class="btn-primary">Ver mas</a>
-            </div>
-            `;
-            // Inserta cada card antes de la tag de cierre, asi cada card se anhade al final
-            container.insertAdjacentHTML('beforeend', card)
-        });
+        // Usamos la funcion para renderizar la vista
+        renderProviders(providers, container)
+
+        // Usamos la funcion para filtrar los proveedores
+        searchProviders(providers, container)
+
     } catch (error) {
-        container.innerHTML = "<p> Error cargando proveedores</p>"
+        const container = document.getElementById("providers-list");
+        container.innerHTML = "<p> Error cargando proveedores</p>";
     }
 
-    };
+};
     
 loadProviders();
