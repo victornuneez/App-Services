@@ -1,3 +1,42 @@
+const getStars = (rating) => {
+    const full = "★".repeat(rating);
+    const empty = "☆".repeat(5 - rating);
+    return full + empty;
+};
+
+// Funcion que renderiza los datos en el contenedor de la vista de proveedores
+const renderProviders = (list, container) => {
+    // Limpiamos la vista, osino cada vez que busquemos un proveedor los resultddos nuevos se acumularan debajo de los viejos infinitamente
+    container.innerHTML = "";
+    
+    // Muestra cada proveedor en su respectiva carta
+    list.forEach(provider => {
+        // Creamos la card en HTML, repeat metodo de JS que repite un texto
+        const card = `
+        <div class="card">
+        <h4 class="card-title">${provider.name}</h4>
+        
+        <p class="card-category">${provider.service}</p>
+        
+        <p class="card-rating">
+            ${getStars(provider.rating)}
+            <span class="rating-text">
+                ${provider.rating}.0 (${provider.reviews || 0} reseñas)
+            </span>
+        </p>
+
+        <p class="card-location">
+            📍 ${provider.location || "Sin ubicacion"}
+        </p>
+        
+        <a href="detail-provider.html?id=${provider.id}" class="btn-primary">Ver mas</a>
+        </div>
+        `;
+        // Inserta cada card antes de la tag de cierre, asi cada card se anhade al final
+        container.insertAdjacentHTML('beforeend', card);
+    });
+};
+
 // FUNCION PARA INSERTAR EL NAVBAR EN CADA PAGINA
 const loadNavbar = async () => {
     // Obtenemos el contenedor de navbar
@@ -13,10 +52,6 @@ const loadNavbar = async () => {
     navbar.innerHTML = html;
 }
 
-// Ejecutamos la funcion
-loadNavbar();
-
-
 const loadFooter = async () => {
     const footer = document.getElementById("footer");
     
@@ -27,4 +62,29 @@ const loadFooter = async () => {
     footer.innerHTML = html;
 }
 
+
+const loadFeaturedProviders = async () => {
+    const res = await fetch("data/providers.json");
+    const providers = await res.json();
+
+    // Obtenemos el contenedor en donde pondremos los proveedores destacados
+    const container = document.getElementById("featured-providers")
+
+    // validamos si hay un contenedor, osino retornamos para no romper las otras paginas
+    if(!container)  {
+        return;
+    }
+    
+    // Obtenemos los proveedores con 4 de rating
+    const featured = providers.filter(p => p.rating >= 4);
+    
+    // Limitamos los proveedores destacados a 3.
+    const top = featured.slice(0, 3);
+
+    // Insertamos las vistas en el contenedor
+    renderProviders(top, container);
+}
+
+loadNavbar();
+loadFeaturedProviders();
 loadFooter();
