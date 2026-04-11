@@ -56,13 +56,17 @@ body {
     text-decoration: none;          /*quita el subrayado de las opciones de menu*/
     color: var(--text);             /*color de textos del menu*/
     font-size: 20px;                /*tamanho de los textos*/
-    transition: color 0.2s ease;    /*tiempo en que tarda la transicion de cambiar de color de un boton*/
 }
 
-/*hover es una pseudoclase que detecta cuando el cursor pasa por un elemento*/
-/*Da feedback visual al usuario*/
-.navbar a:hover {
-    color: var(--muted)             /*color al que cambie los elementos al posarse el cursor*/
+.nav-link {
+    padding: 8px 12px;  /*crea la caja*/
+    border-radius: 6px; /*bordes redondeados*/
+    transition: 0.2s ease;  /*Velocidad de la transicion y como*/
+}
+
+.nav-link:hover {
+    background-color: var(--primary);   /*fondo color del boton*/
+    color: var(--text); /*el texto cambia al color blanco para mantener el contraste*/
 }
 
 /*La clase boton, estilo base reutilizable*/
@@ -74,6 +78,11 @@ body {
     text-decoration: none;             /*quita subrayado automatico de los enlaces <a>*/
     border-radius: 8px;                 /*redondera las esquinas del boton*/
     font-weight: bold;                /*pone el texto en negrita*/
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #6a5acd;  /*el boton se pone mas oscuro cuando el cursor se posiciona sobre el*/
 }
 
 .hero {
@@ -102,4 +111,8 @@ body {
     border-top: 1px solid var(--border);    /*linea superior del contenedor, tipo, grosor y color*/
     text-align: center;         /*alineamos en el centro el texto*/
     color: var(--muted);    /*color del texto*/
+}
+
+.button {
+    cursor: pointer;    /*el cursor de vuelve una mano al posicionarse sobre los botones*/
 }
