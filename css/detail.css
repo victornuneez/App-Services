@@ -1,0 +1,39 @@
+.provider-detail-card {
+    margin-top: 60px;       /*margen superior*/
+    background-color: var(--surface);   /*color de fondo*/
+    padding: 40px;  /*relleno superior e inferior*/
+    border-radius: 12px;    /*borde redondeado de la carta*/
+    max-width: 600px;   /*maximo de ancho, pero se puede encoger hasta donde quiera*/
+    margin-left: auto;  /*margen automatico izquierdo*/
+    margin-right: auto; /*margen automatico derecho*/
+}
+
+.provider-name {
+    font-size: 32px;    /*tamanho de la fuente*/
+    margin-bottom: 10px;    /*margen inferior*/
+}
+
+.provider-service {
+    color: var(--muted);    /*color de texto*/
+    margin-bottom: 15px;    /*margen inferior*/
+}
+
+.provider-rating {
+    font-size: 18px;    /*tamanho de fuente*/
+    margin-bottom: 15px;    /*margen inferior*/
+}
+
+.provider-location {
+    margin-bottom: 25px;    /*margen inferior*/
+}
+
+.provider-description {
+    margin-bottom: 25px;    /*margen inferior*/
+    line-height: 1.5;       /*espacio entre los renglones de la descripcion*/
+}
+
+.provider-detail-card .btn-primary {
+    display: inline-block;
+}
+
+
