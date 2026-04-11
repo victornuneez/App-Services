@@ -1,43 +1,103 @@
+
 [
     {
-        "id" : 1,
-        "name" :"Rodolfo Escobar",
-        "service" : "Albanhil",
-        "rating" : 4
+        "id": 1,
+        "name": "Rodolfo Escobar",
+        "service": "Albañil",
+        "rating": 5,
+        "reviews": 45,
+        "location": "Villa Elisa",
+        "phone": "+595975123456",
+        "description": "Especialista en reformas integrales y construcción de viviendas con más de 10 años de experiencia."
     },
-
     {
-        "id" : 2,
-        "name" :"Eulogio Gomez",
-        "service" : "Pintor",
-        "rating" : 5
+        "id": 2,
+        "name": "Eulogio Gómez",
+        "service": "Pintor",
+        "rating": 4,
+        "reviews": 78,
+        "location": "Fernando Zona Norte",
+        "phone": "+595975123456",
+        "description": "Acabados de alta calidad en interiores y exteriores utilizando las mejores técnicas de pintura."
     },
-
     {
-        "id" : 3,
-        "name" :"Mauricio Torres",
-        "service" : "Electricista",
-        "rating" : 4
+        "id": 3,
+        "name": "Mauricio Torres",
+        "service": "Electricista",
+        "rating": 4,
+        "reviews": 34,
+        "location": "San Lorenzo",
+        "phone": "+595975123456",
+        "description": "Instalaciones eléctricas residenciales y comerciales seguras, bajo normas vigentes."
     },
-
-        {
-        "id" : 4,
-        "name" :"Ignacio Colman",
-        "service" : "Jardinero",
-        "rating" : 3
+    {
+        "id": 4,
+        "name": "Ignacio Colmán",
+        "service": "Jardinero",
+        "rating": 4,
+        "reviews": 23,
+        "location": "Trinidad",
+        "phone": "+595975123456",
+        "description": "Diseño y mantenimiento de jardines, poda de árboles y paisajismo personalizado."
     },
-
-        {
-        "id" : 5,
-        "name" :"Gloria Ayala",
-        "service" : "Organizadora de Eventos",
-        "rating" : 4
+    {
+        "id": 5,
+        "name": "Gloria Ayala",
+        "service": "Org. Eventos",
+        "rating": 4,
+        "reviews": 56,
+        "location": "M.R.A",
+        "phone": "+595975123456",
+        "description": "Planificación total para bodas, cumpleaños y eventos corporativos inolvidables."
     },
-
-        {
-        "id" : 6,
-        "name" :"Alcides Gonzales",
-        "service" : "Asadero",
-        "rating" : 5
+    {
+        "id": 6,
+        "name": "Alcides González",
+        "service": "Asadero",
+        "rating": 4,
+        "reviews": 66,
+        "location": "Lambaré",
+        "phone": "+595975123456",
+        "description": "Servicio de parrillada completa para eventos sociales con carnes premium y guarniciones."
+    },
+    {
+        "id": 7,
+        "name": "Aldo Espínola",
+        "service": "Cerrajero",
+        "rating": 3,
+        "reviews": 14,
+        "location": "Asunción",
+        "phone": "+595975123456",
+        "description": "Apertura de cerraduras, duplicado de llaves y sistemas de seguridad las 24 horas."
+    },
+    {
+        "id": 8,
+        "name": "Fabio Verdún",
+        "service": "Herrería",
+        "rating": 4,
+        "reviews": 56,
+        "location": "Fernando Zona Sur",
+        "phone": "+595975123456",
+        "description": "Fabricación de portones, rejas y estructuras metálicas a medida con gran durabilidad."
+    },
+    {
+        "id": 9,
+        "name": "Beatriz Méndez",
+        "service": "Plomera",
+        "rating": 5,
+        "reviews": 29,
+        "location": "Luque",
+        "phone": "+595975123456",
+        "description": "Detección de filtraciones y reparación de cañerías con equipos de última tecnología."
+    },
+    {
+        "id": 10,
+        "name": "Ricardo Lugo",
+        "service": "Flete y Mudanza",
+        "rating": 4,
+        "reviews": 82,
+        "location": "Capiatá",
+        "phone": "+595975123456",
+        "description": "Transporte seguro de muebles y mercaderías con personal capacitado para carga y descarga."
     }
 ]
