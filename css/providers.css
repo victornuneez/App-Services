@@ -6,6 +6,7 @@
     display: flex;  /*pone los cards uno al lado del otro y activa el flexbox*/
     gap: 20px;      /*crea un espacion de 20px entre los elementos*/
     margin-top: 31px; /*crea un espacio superior de 31px*/
+    flex-wrap: wrap;    /*hace que las cards bajen a la siguiente fila si no entran mas, se ordena segun el tamanho de pantalla*/
 
 }
 
@@ -14,6 +15,11 @@
     padding: 25px;          /*espacio interior de cada card*/
     border-radius: 10px;    /*redondea el borde de cada card*/
     flex: 1;            /*hace que las cada card tengan el mismo ancho y se repartan el espacio del contenedor en partes iguales*/
+}
+
+.card:hover {
+    transform: translateY(-1px);    /*dezplaza el elemento verticalmente(arriba)*/
+    transition: 0.2s;       /*controla la velocidad de la animacion*/
 }
 
 /*section*/
@@ -25,4 +31,51 @@
 .providers-page h2 {
     font-size: 32px;        /*tamanho de la fuente*/
     margin-bottom: 20px;    /*crea un espacio inferior del contenido del h2*/
+}
+
+.card-title {
+    font-size: 20px;        /*tamanho de la fuente*/
+    margin-bottom: 5px;     /*Espacio inferior*/
+}
+
+.card-category {
+    color: var(--muted); /*color de texto del servicio*/
+    margin-bottom: 10px;   /*espacio inferior*/
+    font-size: 14px;       /*tamanho de la fuente*/
+}
+
+.card-rating {
+    margin-bottom: 15px;    /*espacio inferior*/
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f5b301;
+    font-size: 16px;
+}
+
+.rating-text {
+    color:var(--muted);
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+#search-input {
+    width: 100%;    /*ocupar todo el ancho de la web*/
+    padding: 10px;  /*relleno de 10 px arriba y abajo*/
+    margin-bottom: 15px; /*margen(espacio inferior) de 15 px*/
+    border-radius: 8px; /*borde de la barra de buscador*/
+    background: var(--surface); /*color de fondo de la barra*/
+    color: var(--text); /*color de texto*/
+}
+
+.filters {
+    display: flex; /*activa el modo flexbox y tomamos control total sobre los botones*/
+    gap: 10px;      /*espacio entre elementos*/
+    margin-bottom: 20px;    /*crea un margen inferior*/
+}
+
+.card-location {
+    color: var(--muted);    /*color de texto*/
+    font-size: 14px;        /*tamanho de fuente*/
+    margin-bottom: 15px;    /*margen inferior*/
 }
