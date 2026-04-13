@@ -1,39 +1,93 @@
 .provider-detail-card {
-    margin-top: 60px;       /*margen superior*/
+    margin-top: 50px;       /*margen superior*/
+    margin-bottom: 50px;
     background-color: var(--surface);   /*color de fondo*/
     padding: 40px;  /*relleno superior e inferior*/
     border-radius: 12px;    /*borde redondeado de la carta*/
-    max-width: 600px;   /*maximo de ancho, pero se puede encoger hasta donde quiera*/
+    max-width: 900px;   /*maximo de ancho, pero se puede encoger hasta donde quiera*/
+    width: 95%; /*para que en celulares no toque el borde del navegador*/
     margin-left: auto;  /*margen automatico izquierdo*/
     margin-right: auto; /*margen automatico derecho*/
+    border: 1px solid var(--border);
 }
 
+.provider-detail-card:hover {
+    transform: translateY(-2px);    /*dezplaza la card verticalmente(arriba)*/
+    transition: 0.2s ease; 
+}
 .provider-name {
-    font-size: 32px;    /*tamanho de la fuente*/
+    font-size: 40px;    /*tamanho de la fuente*/
     margin-bottom: 10px;    /*margen inferior*/
+    font-weight: 800;   /*espesor de letras*/
 }
 
 .provider-service {
     color: var(--muted);    /*color de texto*/
-    margin-bottom: 15px;    /*margen inferior*/
+    margin-bottom: 16px;    /*margen inferior*/
+    font-size: 18px;
+    font-weight: 600;   /*espesor de la letra*/
+    text-transform: uppercase;  /*Todas las letras en mayuscula*/
+    padding: 2px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: var(--border);
 }
 
 .provider-rating {
     font-size: 18px;    /*tamanho de fuente*/
-    margin-bottom: 15px;    /*margen inferior*/
+    margin-bottom: 20px;    /*margen inferior*/
 }
 
 .provider-location {
-    margin-bottom: 25px;    /*margen inferior*/
+    position: right;
+    margin-bottom: 20px;    /*margen inferior*/
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .provider-description {
     margin-bottom: 25px;    /*margen inferior*/
-    line-height: 1.5;       /*espacio entre los renglones de la descripcion*/
+    line-height: 1.8;       /*espacio entre los renglones de la descripcion*/
+    font-size: 18px;
+    color: var(--muted);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    border: 1px solid var(--border);
 }
 
 .provider-detail-card .btn-primary {
     display: inline-block;
 }
 
+
+/* Estilo para los nuevos datos */
+.provider-info-grid {
+    display: grid;
+    gap: 30px;
+    margin: 40px 0;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.info-item strong {
+    display: block;
+    font-size: 15px;
+    text-transform: uppercase;  /*transforma todos los caracteres en mayusculas*/
+    letter-spacing: 0.5px;        /*espacio entre letras*/
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.info-item p {
+    font-size: 17px;
+    color: var(--muted);
+}
+
+.label-provider {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
 
