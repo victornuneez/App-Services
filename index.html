@@ -14,6 +14,7 @@
     
     <!--CSS ESPECIFICO DE INICIO-->
     <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" type="image/png" href="images/logo-serviYa.png">
 </head>
 <body>
     <!--NAVBAR REUTILIZABLE - ES UN CONTENEDOR VACIO PARA LLENAR CON JS-->
@@ -23,20 +24,65 @@
 
     <!--CONTENIDO PRINCIPAL - SOLO UN MAIN POR PAGINA(CONTENIDO PRINCIPAL)-->
     <main class="container">
-        <!--Section del HERO-->
+        
+        <!-- HERO -->
         <section class="hero">
-            <h2>Encontra los mejores proveedores de servicios de la ciudad</h2>
+            <h2>🛠️ Encontra los mejores proveedores de servicios de la ciudad</h2>
             <p>Conectamos personas con proveedores verificados de forma rapida y segura</p>
-
             <a href="providers.html" class="btn-primary">Ver proveedores</a>
         </section>
 
-        <!--Section de cards de Proveedores destacados-->
+        <!--PROVEEDORES DESTACADOS-->
         <section class="providers">
-            <h3>Proveedores destacados</h3>
+            <div class="section-header">
+                <h3>✨ Proveedores destacados</h3>
+                <p>Los mejores servicios calificados por nuestra comunidad</p>
+            </div>
+            <!-- CARDS PROVEEDORES -->
+            <div class="cards" id="featured-providers"> 
 
-            <div class="cards" id="featured-providers">
+            </div>
+        </section>
 
+        <!--HISTORIA DE WEB-->
+        <section class="history">
+            <div class="info-card">
+                <h3>🤔¿Porque existe ServiPy?</h3>
+                <p>
+                    Encontrar un buen proveedor de servicios no deberia ser complicado.
+                    Muchas veces perdemos tiempo buscando recomendaciones o confiando en opciones que no siempre cumplen.
+                </p>
+                <p>
+                    ServiPy nace para resolver eso: conectar personas con proveedores confiables de forma rapida y facil.
+                </p>
+            </div>
+        </section>
+
+        <!--OBJETIVO DE LA WEB-->
+        <section class="objetive">
+            <div class="info-card highlight">
+                <h3>🎯 Nuestro Objetivo</h3>
+                <p>Que encuentres, compares y contactes un proveedor en menos de 1 minuto.</p>
+            </div>
+        </section>
+
+        <!--BOTON VER PROVEEDORES-->
+        <section class="verifications">
+            <div class="verify-card">
+                <span class="icon">✅</span>
+                <h4>Verificados</h4>
+                <p>Proveedores con identidad confirmada.</p>
+            </div>
+            
+            <div class="verify-card">
+                <span class="icon">⭐</span>
+                <h4>Reseñas reales</h4>
+                <p>Opiniones de otros usuarios de la ciudad</p>
+            </div>
+            <div class="verify-card">
+                <span class="icon">📲</span>
+                <h4>Directo</h4>
+                <p>Sin intermediarios ni comisiones ocultas</p>
             </div>
         </section>
     </main>
