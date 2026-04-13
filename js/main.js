@@ -1,8 +1,13 @@
 const getStars = (rating) => {
-    const full = "★".repeat(rating);
+    // El metodo repeat toma el caracter y lo multiplica por el valor del rating
+    const stars = "★".repeat(rating);
+    
+    // Calcula cuantas estrellas vacias se necesitan para completar 5 estrellas.(Resta el 5 estrellas - el rating)
     const empty = "☆".repeat(5 - rating);
-    return full + empty;
-};
+
+    // Concatenamos ambos resultados y devolvemos un resultado completo
+    return stars + empty; 
+}
 
 // Funcion que renderiza los datos en el contenedor de la vista de proveedores
 const renderProviders = (list, container) => {
@@ -11,6 +16,7 @@ const renderProviders = (list, container) => {
     
     // Muestra cada proveedor en su respectiva carta
     list.forEach(provider => {
+
         // Creamos la card en HTML, repeat metodo de JS que repite un texto
         const card = `
         <div class="card">
@@ -21,14 +27,16 @@ const renderProviders = (list, container) => {
         <p class="card-rating">
             ${getStars(provider.rating)}
             <span class="rating-text">
-                ${provider.rating}.0 (${provider.reviews || 0} reseñas)
+                ${provider.rating}.0 • (${provider.reviews || 0} reseñas)
             </span>
         </p>
 
         <p class="card-location">
             📍 ${provider.location || "Sin ubicacion"}
         </p>
-        
+
+        <p class="card-price-tag">${provider.price_estimate}</p>
+
         <a href="detail-provider.html?id=${provider.id}" class="btn-primary">Ver mas</a>
         </div>
         `;
@@ -84,6 +92,9 @@ const loadFeaturedProviders = async () => {
     // Insertamos las vistas en el contenedor
     renderProviders(top, container);
 }
+
+
+
 
 loadNavbar();
 loadFeaturedProviders();
