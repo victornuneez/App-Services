@@ -1,3 +1,27 @@
+const loadingState = (container) => {
+    container.innerHTML = `
+    <div class="loading-state" role="status" aria-live="polite">
+        <h3>Cargando proveedores...</h3>
+    </div>
+    `;
+};
+
+const emptyState = (container) => {
+    container.innerHTML = `
+    <div class="empty-state" role="status" aria-live="polite">
+        <h3>Sin resultados</h3>
+    </div>
+    `;
+};
+
+const errorState = (container) => {
+    container.innerHTML = `
+    <div class="error-state" role="status" aria-live="polite">
+        <h3>Error al cargar</h3>
+    </div>
+    `;
+};
+
 
 // Funcion que se encarga de realizar las busquedas por categorias y letras.
 const searchProviders = (providers, container) => {
@@ -6,7 +30,6 @@ const searchProviders = (providers, container) => {
 
     // activamos el evento input, con solo agregar una letra en el buscador se ejecutara
     input.addEventListener("input", () => {
-        // guardamos el texto que escribio el usuario en minusculas
         const text = input.value.toLowerCase();
 
         // Guardamos los proveedores o proveedor que coincidan con el caracter o caracteres de la busqueda.
@@ -14,14 +37,28 @@ const searchProviders = (providers, container) => {
             p.name.toLowerCase().includes(text) ||
             p.service.toLowerCase().includes(text) 
         );
+
+        // Si la lista filtrada es igual a 0, entonces usamos la funcion de estado sin resultados
+        if(filtered.length === 0) {
+            emptyState(container);
         
         // Renderizamos la lista con los proveedores que coinciden con la busqueda.
-        renderProviders(filtered, container);
+        } else {
+            renderProviders(filtered, container);
+        }
+
     });
 };
 
 
 const loadProviders = async () => {
+    
+    // Seleccionamos el contenedor en donde se insertaran los datos
+    const container = document.getElementById("providers-list");
+    
+    // Mostramos el estado de carga antes de hacer el fetch
+    loadingState(container);
+
     try {
         // Traemos el archivo JSON
         const res = await fetch("data/providers.json");
@@ -29,11 +66,9 @@ const loadProviders = async () => {
         // Lo convertimos a objeto JSON
         const providers = await res.json();
         
-        // Seleccionamos el contenedor en donde se insertaran los datos
-        const container = document.getElementById("providers-list");
-        
+        // Verificamos si providers existe y si tiene datos
         if(!providers || providers.length === 0) {
-            container.innerHTML = "<p>No hay proveedores disponibles</p>";
+            emptyState(container);
             return;
         }
         // Usamos la funcion para renderizar la vista
@@ -43,8 +78,8 @@ const loadProviders = async () => {
         searchProviders(providers, container)
 
     } catch (error) {
-        const container = document.getElementById("providers-list");
-        container.innerHTML = "<p> Error cargando proveedores</p>";
+        errorState(container);
+        
     }
 
 };
