@@ -1,9 +1,28 @@
-.providers {
-    margin-top: 60px; /*crear espacio superior*/
+/*section*/
+.providers-page {
+    margin-top: 60px;   /*crea espacio superior de la barra de nav*/
+}
+
+/*subtitulo de la section*/
+.providers-page h2 {
+    font-size: 50px;        /*tamanho de la fuente*/
+    margin-bottom: 20px;    /*crea un espacio inferior del contenido del h2*/
+    font-weight: 800;
+}
+
+#search-input {
+    width: 100%;    /*ocupar todo el ancho de la web*/
+    padding: 10px;  /*relleno de 10 px arriba y abajo*/
+    margin-bottom: 15px; /*margen(espacio inferior) de 15 px*/
+    border-radius: 8px; /*borde de la barra de buscador*/
+    background: var(--surface); /*color de fondo de la barra*/
+    color: var(--text); /*color de texto*/
+    margin-top: 10px;
 }
 
 .cards {
-    display: flex;  /*pone los cards uno al lado del otro y activa el flexbox*/
+    display: grid;  /*Ordenamos las cards tipo grilla*/
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /*Crea cols automaticas que miden min280px y se estiran para ocupar espacio*/
     gap: 20px;      /*crea un espacion de 20px entre los elementos*/
     margin-top: 31px; /*crea un espacio superior de 31px*/
     flex-wrap: wrap;    /*hace que las cards bajen a la siguiente fila si no entran mas, se ordena segun el tamanho de pantalla*/
@@ -14,34 +33,32 @@
     background-color: var(--surface); /*color de fondo de cada card*/
     padding: 25px;          /*espacio interior de cada card*/
     border-radius: 10px;    /*redondea el borde de cada card*/
-    flex: 1;            /*hace que las cada card tengan el mismo ancho y se repartan el espacio del contenedor en partes iguales*/
+    border: 1px solid var(--border);
 }
 
 .card:hover {
-    transform: translateY(-1px);    /*dezplaza el elemento verticalmente(arriba)*/
-    transition: 0.2s;       /*controla la velocidad de la animacion*/
+    transform: translateY(-2px);    /*dezplaza la card verticalmente(arriba)*/
+    transition: 0.2s ease;       /*controla la velocidad de la animacion*/
 }
 
-/*section*/
-.providers-page {
-    margin-top: 60px;   /*crea espacio superior de la barra de nav*/
-}
-
-/*subtitulo de la section*/
-.providers-page h2 {
-    font-size: 32px;        /*tamanho de la fuente*/
-    margin-bottom: 20px;    /*crea un espacio inferior del contenido del h2*/
-}
 
 .card-title {
-    font-size: 20px;        /*tamanho de la fuente*/
-    margin-bottom: 5px;     /*Espacio inferior*/
+    font-size: 22px;        /*tamanho de la fuente*/
+    margin-bottom: 8px;     /*Espacio inferior*/
+    font-weight: 600;
 }
 
 .card-category {
     color: var(--muted); /*color de texto del servicio*/
     margin-bottom: 10px;   /*espacio inferior*/
     font-size: 14px;       /*tamanho de la fuente*/
+    padding: 2px 8px;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: var(--border);
+    font-weight: 600;   /*espesor de la letra*/
+    text-transform: uppercase;  /*Todas las letras en mayuscula*/
+    font-weight: 600;
 }
 
 .card-rating {
@@ -49,33 +66,39 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    font-size: 20px;
     color: #f5b301;
-    font-size: 16px;
 }
+
 
 .rating-text {
     color:var(--muted);
-    font-size: 14px;
-    opacity: 0.8;
+    font-size: 15px;  
+    opacity: 1;  
 }
 
-#search-input {
-    width: 100%;    /*ocupar todo el ancho de la web*/
-    padding: 10px;  /*relleno de 10 px arriba y abajo*/
-    margin-bottom: 15px; /*margen(espacio inferior) de 15 px*/
-    border-radius: 8px; /*borde de la barra de buscador*/
-    background: var(--surface); /*color de fondo de la barra*/
-    color: var(--text); /*color de texto*/
-}
-
-.filters {
-    display: flex; /*activa el modo flexbox y tomamos control total sobre los botones*/
-    gap: 10px;      /*espacio entre elementos*/
-    margin-bottom: 20px;    /*crea un margen inferior*/
-}
 
 .card-location {
-    color: var(--muted);    /*color de texto*/
-    font-size: 14px;        /*tamanho de fuente*/
+    color: var(--text);    /*color de texto*/
+    font-size: 15px;        /*tamanho de fuente*/
     margin-bottom: 15px;    /*margen inferior*/
+    line-height: 1.5;
 }
+
+.card-price-tag {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+/*Label de busqueda*/
+.visually-hidden {
+    color: var(--muted);
+    font-weight: 800;
+}
+
+.loading-state, .empty-state, .error-state {
+    text-align: center;
+    color: var(--muted);
+    font-size: 18px;
+}
+
