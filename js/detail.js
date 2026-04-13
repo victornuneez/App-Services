@@ -35,12 +35,30 @@ const loadProviderDetail = async () => {
             (${provider.reviews || 0} reseñas)
             </p>
             <p class="provider-location">📍 ${provider.location || "Sin Ubicacion"}</p>
+            
             <p class="provider-description">
                 ${provider.description || "Sin descripcion disponible"}
             </p>
 
+            <div class="provider-info-grid">
+                <div class="info-item">
+                    <strong>Zonas de trabajo:</strong>
+                    <p>${provider.zones.join(", ")}</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>Métodos de pago:</strong>
+                    <p>${provider.payments.join(", ")}</p>
+                </div>
+                
+                <div class="info-item">
+                    <strong>Precio estimado:</strong>
+                    <p>${provider.price_estimate}</p>
+                </div>
+            </div>
+
             <a href="https://wa.me/${provider.phone}" target="_blank" class="btn-primary">
-                📞 WhatsApp
+                WhatsApp
             </a>
         </div>
     `;
