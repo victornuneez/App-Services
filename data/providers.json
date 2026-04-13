@@ -1,4 +1,3 @@
-
 [
     {
         "id": 1,
@@ -7,6 +6,9 @@
         "rating": 5,
         "reviews": 45,
         "location": "Villa Elisa",
+        "zones": ["Villa Elisa", "San Lorenzo", "Lambaré"],
+        "payments": ["Efectivo", "Transferencia"],
+        "price_estimate": "Desde 150.000 Gs.",
         "phone": "+595975123456",
         "description": "Especialista en reformas integrales y construcción de viviendas con más de 10 años de experiencia."
     },
@@ -17,6 +19,9 @@
         "rating": 4,
         "reviews": 78,
         "location": "Fernando Zona Norte",
+        "zones": ["Gran Asunción", "Fernando de la Mora"],
+        "payments": ["Efectivo", "Transferencia", "Tarjeta"],
+        "price_estimate": "Desde 45.000 Gs. por m²",
         "phone": "+595975123456",
         "description": "Acabados de alta calidad en interiores y exteriores utilizando las mejores técnicas de pintura."
     },
@@ -27,6 +32,9 @@
         "rating": 4,
         "reviews": 34,
         "location": "San Lorenzo",
+        "zones": ["San Lorenzo", "Capiatá", "Luque"],
+        "payments": ["Efectivo", "Giros Tigo"],
+        "price_estimate": "Desde 80.000 Gs.",
         "phone": "+595975123456",
         "description": "Instalaciones eléctricas residenciales y comerciales seguras, bajo normas vigentes."
     },
@@ -37,6 +45,9 @@
         "rating": 4,
         "reviews": 23,
         "location": "Trinidad",
+        "zones": ["Asunción", "Mariano Roque Alonso"],
+        "payments": ["Efectivo"],
+        "price_estimate": "Desde 70.000 Gs.",
         "phone": "+595975123456",
         "description": "Diseño y mantenimiento de jardines, poda de árboles y paisajismo personalizado."
     },
@@ -47,6 +58,9 @@
         "rating": 4,
         "reviews": 56,
         "location": "M.R.A",
+        "zones": ["Todo el país"],
+        "payments": ["Transferencia", "Tarjeta de Crédito"],
+        "price_estimate": "Presupuesto personalizado",
         "phone": "+595975123456",
         "description": "Planificación total para bodas, cumpleaños y eventos corporativos inolvidables."
     },
@@ -57,6 +71,9 @@
         "rating": 4,
         "reviews": 66,
         "location": "Lambaré",
+        "zones": ["Lambaré", "Villa Elisa", "Asunción"],
+        "payments": ["Efectivo", "Transferencia"],
+        "price_estimate": "Desde 35.000 Gs. por persona",
         "phone": "+595975123456",
         "description": "Servicio de parrillada completa para eventos sociales con carnes premium y guarniciones."
     },
@@ -67,6 +84,9 @@
         "rating": 3,
         "reviews": 14,
         "location": "Asunción",
+        "zones": ["Asunción", "Lambaré", "Fernando de la Mora"],
+        "payments": ["Efectivo", "Giros", "QR"],
+        "price_estimate": "Urgencias desde 120.000 Gs.",
         "phone": "+595975123456",
         "description": "Apertura de cerraduras, duplicado de llaves y sistemas de seguridad las 24 horas."
     },
@@ -77,6 +97,9 @@
         "rating": 4,
         "reviews": 56,
         "location": "Fernando Zona Sur",
+        "zones": ["Central"],
+        "payments": ["Efectivo", "Transferencia"],
+        "price_estimate": "Según diseño y materiales",
         "phone": "+595975123456",
         "description": "Fabricación de portones, rejas y estructuras metálicas a medida con gran durabilidad."
     },
@@ -87,6 +110,9 @@
         "rating": 5,
         "reviews": 29,
         "location": "Luque",
+        "zones": ["Luque", "Areguá", "San Lorenzo"],
+        "payments": ["Efectivo", "Transferencia", "QR"],
+        "price_estimate": "Visita técnica 50.000 Gs.",
         "phone": "+595975123456",
         "description": "Detección de filtraciones y reparación de cañerías con equipos de última tecnología."
     },
@@ -97,6 +123,9 @@
         "rating": 4,
         "reviews": 82,
         "location": "Capiatá",
+        "zones": ["Todo Central e Interior"],
+        "payments": ["Efectivo", "Transferencia"],
+        "price_estimate": "Desde 100.000 Gs. (local)",
         "phone": "+595975123456",
         "description": "Transporte seguro de muebles y mercaderías con personal capacitado para carga y descarga."
     }
