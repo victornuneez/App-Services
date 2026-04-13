@@ -27,12 +27,15 @@ body {
 /*La clase container define un carril central para el contenido no se desparrame por la pantalla*/
 
 .container {
-    max-width: 1100px; /*define el maximo de ancho de 1100px pero puede achicarse como quiera*/
+    max-width: 1500px; /*define el maximo de ancho de 1100px pero puede achicarse como quiera*/
     margin: 0 auto;    /*primer num(0) indica que arriba y abajo no habra margen extra*/
                     /*auto le indica al navegador que iguale los espacios de derecha e izquierda*/
     padding: 20px; /*impide que el contenido de container toque los bordes.*/
 } 
 
+main.container {
+    min-height: 70vh;   /*Hacemos que el contenido principal ocupe el 70% de la pantalla*/
+}
 
 
 .navbar {
@@ -55,7 +58,8 @@ body {
 .navbar a {
     text-decoration: none;          /*quita el subrayado de las opciones de menu*/
     color: var(--text);             /*color de textos del menu*/
-    font-size: 20px;                /*tamanho de los textos*/
+    font-size: 15px;                /*tamanho de los textos*/
+    font-weight: 800;
 }
 
 .nav-link {
@@ -78,31 +82,14 @@ body {
     text-decoration: none;             /*quita subrayado automatico de los enlaces <a>*/
     border-radius: 8px;                 /*redondera las esquinas del boton*/
     font-weight: bold;                /*pone el texto en negrita*/
-    transition: all 0.2s ease;
+    transition: 0.3s ease;              /*la transicion con ease se vuelve lento, acelera, lento*/
 }
 
 .btn-primary:hover {
     background-color: #6a5acd;  /*el boton se pone mas oscuro cuando el cursor se posiciona sobre el*/
 }
 
-.hero {
-    text-align: center;     /*centra el texto y elementos de la seccion*/
-    margin-top: 60px;       /*crea un espacio por fuera del borde superio de un elemento*/
-    padding: 60px 20px;     /*crea espacio dentro de la seccion entre el contenido y sus propios bordes*/
-    background-color: var(--surface); /*le ponemos color al fondo de manera que pueda visualizar el tamnho de la seccion*/
-    border-radius: 10px; /*redondeamos los bordes de la seccion*/   
-}
 
-.hero h2 {
-    font-size: 40px;        /*tamanho de la fuente del texto del tag h2*/
-    margin-bottom: 20px;    /*crea un espacio por fuera del borde inferior de un elemento*/
-}
-
-.hero p {
-    color: var(--muted);    /*color del texto*/
-    margin-bottom: 30px;    /*espacio inferior*/
-    font-size: 18px;        /*tamanho de la fuente de letra*/
-}
 
 .footer {
     margin-top: 60px;       /*separamos el footer del contenido de arriba*/
@@ -116,3 +103,26 @@ body {
 .button {
     cursor: pointer;    /*el cursor de vuelve una mano al posicionarse sobre los botones*/
 }
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-wrapper a {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.navbar {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text);
+}
+
