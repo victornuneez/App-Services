@@ -127,3 +127,16 @@
     font-size: 16px;
     line-height: 1.5;
 }
+
+@media (max-with: 768px) {
+    .hero {
+        padding: 30px 15px;
+        margin-top: 30px;
+        word-break: break-word; /*Permite forzar el salto de linea entre letras para evitar que palabras largas desborden el contenedor*/
+    }
+
+    .hero h2 {
+        font-size: 24px;
+        word-break: break-word;
+    }
+}
