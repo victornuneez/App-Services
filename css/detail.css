@@ -91,3 +91,43 @@
     font-size: 18px;
 }
 
+.button-back {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    color: var(--muted);
+    margin-left: 90px;
+    font-weight: 600;
+}
+
+.button-back:hover {
+    color: var(--text);
+    transition: 0.2 ease;
+}
+
+
+@media (max-width: 768px) {
+
+    .provider-detail-card {
+        padding: 20px;
+    }
+
+    .provider-name {
+        font-size: 26px;
+    }
+
+    .provider-description, .provider-rating, .provider-location, .provider-service {
+        font-size: 16px;
+    }
+
+    
+    .info-item strong {
+        font-size: 15px; 
+    }
+
+    .button-back {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+}
