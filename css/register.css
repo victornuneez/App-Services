@@ -28,4 +28,19 @@
     background-color: var(--bg);    /*color del fondo de los campos*/
     color: var(--text);  /*Color del texto de los campos*/
     font-size: 16px; /*tamanho de la fuente*/
-}   
+} 
+
+
+@media (max-width: 768px) {
+
+    .register {
+        padding: 25px;  /* Aplicamosun espacio interno de 25 pixeles en todos los lados de la seccionde registro */
+        margin-top: 30px;
+    }
+
+    .register h2 {
+        font-size: 24px;
+    }
+
+    
+}
