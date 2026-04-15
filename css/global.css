@@ -132,14 +132,19 @@ main.container {
     
     .container {
         padding: 15px;  /*Ajustamos el espacio entre el borde del contenedor y su contenido a 15px a los cuatros lados*/
-    } 
+    }
+    
+    html, body {
+        overflow-x: hidden; /*mantenemos el scroll unicamente vertical, evitamos el desbordamiento horizontal*/
+        max-width: 100%;    /*aseguramos que el ancho del html y del body nunca sea mas grande que el ancho de la ventana del navegador*/
+    }
 
     h1, h2, h3 {
         font-size: 26px;
         text-align: center;
     }
 
- .navbar {
+    .navbar {
         flex-direction: column;  /*Alinea los elementos hijos de forma vertical (de arriba a abajo)*/
         gap: 15px;  /*Espacio entre elementos*/
         padding: 20px;  /*Separa el contenido de los bordes fisicos de la pantalla del telefono*/
