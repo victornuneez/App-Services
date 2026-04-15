@@ -18,28 +18,28 @@
 
             <form action="" id="register-form">
                 <label for="name">Nombre Completo:</label>
-                <input type="text" id="name" name="name" placeholder="Nombre y Apellido" required>
+                <input type="text" id="name" name="name" maxlength="20" placeholder="Nombre y Apellido" required>
 
                 <label for="service">Categoria:</label>
-                <input type="text" id="service" name="service" placeholder="Servicio" required>
+                <input type="text" id="service" name="service" maxlength="10" placeholder="Servicio" required>
 
                 <label for="zone">Zonas de servicio:</label>
-                <input type="text" id="zone" placeholder="Hasta que zonas ofreces tus servicios">
+                <input type="text" id="zone" maxlength="40" placeholder="Hasta que zonas ofreces tus servicios">
 
                 <label for="payments">Metodos de cobranza:</label>
-                <input type="text" id="payments" placeholder="Ej: efectivo, transferencias, tarjeta, etc">
+                <input type="text" id="payments" maxlength="15" placeholder="Ej: efectivo, transferencias, etc">
 
                 <label for="price_estimated">Precios de servicios:</label>
-                <input type="text"  id="price_estimated" placeholder="Precio/precios de servicio">
+                <input type="text"  id="price_estimated" maxlength="30" placeholder="Precio/precios de servicio">
 
                 <label for="phone">Telefono:</label>
-                <input type="text" id="phone" name="phone" placeholder="Ej:+595975123456" required>
+                <input type="tel" id="phone" name="phone" maxlength="15" placeholder="Ej:+595975123456" required>
 
                 <label for="location">Ubicacion:</label>
-                <input type="text" id="location" name="location" placeholder="Ubicacion" required>
+                <input type="text" id="location" name="location" maxlength="20" placeholder="Ubicacion" required>
 
                 <label for="description">Descripcion:</label>
-                <textarea name="description" id="description" placeholder="Breve descripcion de tu servicio"></textarea>
+                <textarea name="description" id="description" maxlength="40" placeholder="Breve descripcion de tu servicio"></textarea>
 
                 <button type="submit" class="btn-primary">Enviar</button>
             
