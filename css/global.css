@@ -126,3 +126,51 @@ main.container {
     color: var(--text);
 }
 
+
+/*Se aplicaran estos estilos cuando una pantalla sea de 768px*/
+@media (max-width: 768px) {
+    
+    .container {
+        padding: 15px;  /*Ajustamos el espacio entre el borde del contenedor y su contenido a 15px a los cuatros lados*/
+    } 
+
+    h1, h2, h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+ .navbar {
+        flex-direction: column;  /*Alinea los elementos hijos de forma vertical (de arriba a abajo)*/
+        gap: 15px;  /*Espacio entre elementos*/
+        padding: 20px;  /*Separa el contenido de los bordes fisicos de la pantalla del telefono*/
+    } 
+
+    .navbar ul {
+        flex-direction: column; /*Los elementos del ul se apilan uno debajo del otro*/
+        gap: 10px;
+        width: 100%;    /*obliga a la lista a ocupar todo el ancho disponible de la pantalla movil para poder centrarla respecto a la pantalla*/
+        text-align: center; 
+    } 
+
+    .hero {
+        padding: 30px 15px; /*Reducimos el padding del hero para evitar que el usuario deslice demasiaso para ver contenido del hero*/
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 18px;/* Nos aseguramos que el contenido no este apretado con los bordes de la tarjeta */
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+    
+}
+
