@@ -22,14 +22,18 @@ const errorState = (container) => {
     `;
 };
 
+// Funcion de delay para mostrar el estado cargando en pantalla
+const delay = (ms) => {
+    return new Promise(end => setTimeout(end, ms));
+}
 
 // Funcion que se encarga de realizar las busquedas por categorias y letras.
-const searchProviders = (providers, container) => {
+const searchProviders = async (providers, container) => {
     // obtenemos el input que el usuario ingreso para realizar la busqueda
     const input = document.getElementById("search-input");
 
     // activamos el evento input, con solo agregar una letra en el buscador se ejecutara
-    input.addEventListener("input", () => {
+    input.addEventListener("input", async () => {
         const text = input.value.toLowerCase();
 
         // Guardamos los proveedores o proveedor que coincidan con el caracter o caracteres de la busqueda.
@@ -37,7 +41,11 @@ const searchProviders = (providers, container) => {
             p.name.toLowerCase().includes(text) ||
             p.service.toLowerCase().includes(text) 
         );
-
+        
+        // Mostrar estado de cargando en pantalla
+        loadingState(container);
+        await delay(600);
+        
         // Si la lista filtrada es igual a 0, entonces usamos la funcion de estado sin resultados
         if(filtered.length === 0) {
             emptyState(container);
