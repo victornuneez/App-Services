@@ -66,10 +66,8 @@ const loadProviders = async () => {
     await delay(600)
 
     try {
-        // Traemos el archivo JSON
+        // Traemos el archivo JSON y Lo convertimos a objeto JSON
         const res = await fetch("data/providers.json");
-        
-        // Lo convertimos a objeto JSON
         const providers = await res.json();
         
         // Verificamos si providers existe y si tiene datos
@@ -77,6 +75,7 @@ const loadProviders = async () => {
             emptyState(container);
             return;
         }
+        
         // Usamos la funcion para renderizar la vista
         renderProviders(providers, container)
 
