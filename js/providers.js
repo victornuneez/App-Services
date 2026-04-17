@@ -42,9 +42,6 @@ const searchProviders = async (providers, container) => {
             p.service.toLowerCase().includes(text) 
         );
         
-        // Mostrar estado de cargando en pantalla
-        loadingState(container);
-        await delay(600);
         
         // Si la lista filtrada es igual a 0, entonces usamos la funcion de estado sin resultados
         if(filtered.length === 0) {
@@ -66,6 +63,7 @@ const loadProviders = async () => {
     
     // Mostramos el estado de carga antes de hacer el fetch
     loadingState(container);
+    await delay(600)
 
     try {
         // Traemos el archivo JSON
