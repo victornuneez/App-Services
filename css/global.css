@@ -1,5 +1,5 @@
 
-/*CSS RESET, limpiamos los estilos por defecto del navegador*/
+/*CSS RESET, limpiamos los margenes y rellenos por defecto de todos los elementos*/
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 
-/* VARIABLES DE COLOR */
+/* VARIABLES GLOBALES variables reutilizables en toda la app*/
 :root {
     --bg: #0d0f14;          /*background, color del fondo de la pagina*/
     --surface: #161a23;     /*Superficie, capa encima del fondo*/
@@ -17,6 +17,7 @@
     --border: #2a2f3e;      /*color para las lineas divisorias*/
 }
 
+
 /*Definimos el tipo de fuente, fondo y color de texto de toda la pagina*/
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -24,8 +25,8 @@ body {
     color: var(--text);
 }
 
-/*La clase container define un carril central para el contenido no se desparrame por la pantalla*/
 
+/*Contenedor principal para centrar el contenido*/
 .container {
     max-width: 1500px; /*define el maximo de ancho de 1100px pero puede achicarse como quiera*/
     margin: 0 auto;    /*primer num(0) indica que arriba y abajo no habra margen extra*/
@@ -33,11 +34,13 @@ body {
     padding: 20px; /*impide que el contenido de container toque los bordes.*/
 } 
 
+
+
 main.container {
     min-height: 70vh;   /*Hacemos que el contenido principal ocupe el 70% de la pantalla*/
 }
 
-
+/*Contenedor principal de la barra organiza el logo y menu en una fila, separados y centrados*/
 .navbar {
     display: flex; /*Convierte la barra en una barra flexible*//* Coloca el logo y los enlaces uno al lado del otro*/
     justify-content: space-between; /*Envia el logo a la izquierda y el menu a la derecha */
@@ -48,13 +51,14 @@ main.container {
     border-bottom: 1px solid var(--border); /*borde del boton, tamnho de linea, tipo y color*/
 }
 
-
+/*Lista del menu: posiciona los items de la barra en fila horizontal*/
 .navbar ul {
     display: flex;  /*Pone los elementos uno al lado del otro*/
     gap: 30px;      /*Les da un salto de espacio uno del otro*/
     list-style: none;   /*Quita los estilos de la lista, los puntitos*/
 }
 
+/* Enlaces dentro del navbar: quita estilos por defecto y definimos la apariencia del texto*/
 .navbar a {
     text-decoration: none;          /*quita el subrayado de las opciones de menu*/
     color: var(--text);             /*color de textos del menu*/
@@ -62,18 +66,20 @@ main.container {
     font-weight: 800;
 }
 
+/*Inicio, proveedores creamos el area clickeable con bordes redondeados y animacion*/
 .nav-link {
     padding: 8px 12px;  /*crea la caja*/
     border-radius: 6px; /*bordes redondeados*/
     transition: 0.2s ease;  /*Velocidad de la transicion y como*/
 }
 
+/*Cambia de color el fondo y el de color el texto para dar efecto visual al pasar el mouse*/
 .nav-link:hover {
     background-color: var(--primary);   /*fondo color del boton*/
     color: var(--text); /*el texto cambia al color blanco para mantener el contraste*/
 }
 
-/*La clase boton, estilo base reutilizable*/
+/*La clase boton principal define estilo reutilizable con color, padding y forma*/
 .btn-primary {
     display: inline-block;         /*inline: pone en linea al boton, no ocupa toda la pantalla. block: permite padding,margin */
     padding: 10px 20px;             /*espacio entre el texto y el borde del boton*/
@@ -85,12 +91,13 @@ main.container {
     transition: 0.3s ease;              /*la transicion con ease se vuelve lento, acelera, lento*/
 }
 
+/*Oscurecemos el boton para dar feedback visual*/
 .btn-primary:hover {
     background-color: #6a5acd;  /*el boton se pone mas oscuro cuando el cursor se posiciona sobre el*/
 }
 
 
-
+/*Bloque footer, separamos el bloque inferior, lo centramos y le damos un estilo mas suave*/
 .footer {
     margin-top: 60px;       /*separamos el footer del contenido de arriba*/
     padding: 30px 20px;     /*le damos espacio interno*/
@@ -100,56 +107,60 @@ main.container {
     color: var(--muted);    /*color del texto*/
 }
 
+
 .button {
     cursor: pointer;    /*el cursor de vuelve una mano al posicionarse sobre los botones*/
 }
 
+/* Contenedor del logo, alienamos la imagen y el texto en fila con espacio entre los elementos */
 .logo-wrapper {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
+/*Texto del logo, aumentamos su tamanho y grosor para destacarlo*/
 .logo-wrapper a {
     font-size: 25px;
     font-weight: 800;
 }
 
+/* Imagen del logo, definimos altura fija y mantenemos su proporcion */
 .logo-img {
     height: 45px;
     width: auto;
 }
 
-.navbar {
-    font-size: 26px;
-    font-weight: 800;
-    color: var(--text);
-}
 
-
-/*Se aplicaran estos estilos cuando una pantalla sea de 768px*/
+/* RESPONSIVE */
+/*Se aplican estos cambios cuando la pantalla es de moviles*/
 @media (max-width: 768px) {
     
+    /*Reducimos el padding del contenedor para pantallas chicas*/
     .container {
         padding: 15px;  /*Ajustamos el espacio entre el borde del contenedor y su contenido a 15px a los cuatros lados*/
     }
     
+    /* Limitamos el ancho para evitar el scroll horizontal */
     html, body {
         overflow-x: hidden; /*mantenemos el scroll unicamente vertical, evitamos el desbordamiento horizontal*/
         max-width: 100%;    /*aseguramos que el ancho del html y del body nunca sea mas grande que el ancho de la ventana del navegador*/
     }
 
+    /* Reducimos el tamanho de titulos y los centramos */
     h1, h2, h3 {
         font-size: 26px;
         text-align: center;
     }
 
+    /* Lo elementos del nabvar lo dejamos en forma vertical */
     .navbar {
         flex-direction: column;  /*Alinea los elementos hijos de forma vertical (de arriba a abajo)*/
         gap: 15px;  /*Espacio entre elementos*/
         padding: 20px;  /*Separa el contenido de los bordes fisicos de la pantalla del telefono*/
     } 
 
+    /* Menu en movil, los elementos del menu en columna ocupa todo el ancho */
     .navbar ul {
         flex-direction: column; /*Los elementos del ul se apilan uno debajo del otro*/
         gap: 10px;
@@ -157,10 +168,12 @@ main.container {
         text-align: center; 
     } 
 
+    /* Reducimos el espacio del hero para mejorar su visualizacion */
     .hero {
         padding: 30px 15px; /*Reducimos el padding del hero para evitar que el usuario deslice demasiaso para ver contenido del hero*/
     }
 
+        
     .hero h2 {
         font-size: 24px;
     }
