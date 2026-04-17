@@ -94,21 +94,6 @@
     transition: 0.2s; 
 }
 
-.verifications {
-    display: flex;  /*convertimos el contenedor de las verificaciones en contenedores flexibles y facil de manipular*/
-    gap: 20px;
-    margin-top: 60px;
-    flex-wrap: wrap;    /*Esta propiedad hace que las cards no se compriman y bajen a la linea inferior cuando ya no entran en la fila*/
-}
-
-.verify-card {
-    background-color: var(--surface);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    flex: 1;
-    min-width: 250px;   /*Evita que se achiquen demasiado*/
-}
 
 .verify-card .icon {
     font-size: 40px;
