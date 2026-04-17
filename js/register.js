@@ -12,16 +12,20 @@ const providerRegister = () => {
         const provider = {
             name: document.getElementById("name").value,
             service: document.getElementById("service").value,
+            zones: document.getElementById("zone").value,
+            method_payment: document.getElementById("payments").value,
+            price_estimated: document.getElementById("price_estimated").value,
             phone: document.getElementById("phone").value,
             location: document.getElementById("location").value,
             description: document.getElementById("description").value
+
         };
 
         // Imprimimos los datos en la consola del navegador
         console.log(provider);
 
         // Avisamos al usuario que se registro correctamente
-        form.innerHTML= "<p>Registro enviado correctamente</p">
+        alert("Registro enviado correctamente")
 
         // Borramos todo lo que el usuario escribio en los campos del usuario.(lo dejamos limpio)
         form.reset();
