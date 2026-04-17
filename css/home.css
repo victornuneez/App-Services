@@ -1,3 +1,4 @@
+/* Seccion principal destacada, lo centramos, le damos un color de fondo, espacio internos y bordes redondeados */
 .hero {
     text-align: center;     /*centra el texto y elementos de la seccion*/
     margin-top: 60px;       /*crea un espacio por fuera del borde superio de un elemento*/
@@ -7,30 +8,34 @@
     border: 1px solid var(--border);  
 }
 
+/* Levantamos ligeramente la seccion para dar una seccion interactica */
 .hero:hover {
     transform: translateY(-2px);    /*dezplaza la card verticalmente(arriba)*/
     transition: 0.2s ease; 
 }
 
+/* Titulo del hero,grande y con margen debajo */
 .hero h2 {
     font-size: 40px;        /*tamanho de la fuente del texto del tag h2*/
     margin-bottom: 20px;    /*crea un espacio por fuera del borde inferior de un elemento*/
     font-weight: 800;
 }
 
+/* Texto del hero  */
 .hero p {
     color: var(--muted);    /*color del texto*/
     margin-bottom: 30px;    /*espacio inferior*/
     font-size: 18px;        /*tamanho de la fuente de letra*/
 }
 
-/* Estilos para el encabezado de secciones */
+/* Contenedor de titulos de seccion */
 .section-header {
     text-align: left;
     margin-bottom: 40px; /* Espacio antes de las cards */
     margin-top: 20px;
 }
 
+/* titulo grande y destacado */
 .section-header h3 {
     font-size: 32px;
     color: var(--text);
@@ -83,7 +88,7 @@
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-    flex: 1;
+    flex: 1;    /* hace que el elemento ocupe todo el espacio disponible y lo comparta */
     min-width: 250px;   /*Evita que se achiquen demasiado*/
     border: 1px solid var(--border);
 }
@@ -97,7 +102,7 @@
 
 .verify-card .icon {
     font-size: 40px;
-    display: block;
+    display: block; /* usamos block para que el elemento se estire y ocupe todo el espacio */
     margin-bottom: 15px;
 }
 
