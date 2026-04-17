@@ -39,7 +39,6 @@
 }
 
 .provider-location {
-    position: right;
     margin-bottom: 20px;    /*margen inferior*/
     font-size: 20px;
     font-weight: 600;
@@ -57,11 +56,10 @@
 }
 
 .provider-detail-card .btn-primary {
-    display: inline-block;
+    display: inline-block;  /*para el botn no ocupe todo el ancho, pero si pueda tener padding y tamanho */
 }
 
-
-/* Estilo para los nuevos datos */
+/* usamos grid para organizar la info con separaecion entre elementos */
 .provider-info-grid {
     display: grid;
     gap: 30px;
@@ -86,10 +84,6 @@
     color: var(--muted);
 }
 
-.label-provider {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
 
 .button-back {
     display: inline-block;
