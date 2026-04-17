@@ -3,7 +3,7 @@
     background-color: var(--surface); /*color del fondo del formulario*/
     padding: 60px;  /*relleno superio e inferior*/
     border-radius: 12px; /*borde redondeado del contenedor*/
-    max-width: 600px;   /*maximo de ancho permitido*/
+    max-width: 1000px;   /*maximo de ancho permitido*/
     margin-left: auto; /*Margen izquierdo automatico*/
     margin-right: auto; /*MArgen derecho automatico*/
 }
@@ -29,6 +29,10 @@
     color: var(--text);  /*Color del texto de los campos*/
     font-size: 16px; /*tamanho de la fuente*/
 } 
+
+.message-register {
+    text-align: center;
+}
 
 
 @media (max-width: 768px) {
